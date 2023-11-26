@@ -7,10 +7,7 @@
 
 .container {
     font-size: 200%;
-    margin-top: 40%;
+    margin: auto;
+    margin-top: 20%;
+    
 }
-
-.container>p {
-    margin-top: 60%;
-}
-
