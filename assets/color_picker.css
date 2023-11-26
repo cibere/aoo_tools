@@ -1,3 +1,5 @@
+/* All */
+
 #color-code-display {
     background-color: black;
     border-radius: 20px;
@@ -5,9 +7,47 @@
     cursor: pointer;
 }
 
-.container {
-    font-size: 200%;
-    margin: auto;
-    margin-top: 20%;
-    
+h1 {
+    color: green;
+}
+
+/* Mobile */
+@media  (max-width:500px) {
+    body {
+        font-size: 7vw;
+    }
+    .container {
+        margin-top: 45%;
+    }
+    .container>input {
+        width: 95%;
+        height: 10%;
+        margin-top: 1%
+    }
+
+    h1 {
+        color: blue;
+    }
+}
+
+/* PC */
+@media only screen and (min-width:500px) {
+    body {
+        font-size: 2vw;
+    }
+
+    .container {
+        font-size: 2vw;
+        margin-top: 50;
+    }
+
+    .container>input {
+        width: 20%;
+        height: 10%;
+        margin-top: 2%
+    }
+
+    h1 {
+        color: black;
+    }
 }
