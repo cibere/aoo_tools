@@ -2,87 +2,30 @@
 
 <head>
     <title>Color Picker for Age of Origins</title>
-    <style>
-        body {
-            background-color: rgb(33, 33, 33);
-            color: white;
-            text-align: center;
-        }
-
-        .container {
-            font-size: 20px;
-        }
-
-        #color-code-display {
-            background-color: black;
-            border-radius: 20px;
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
-    <style>
-        .alert {
-            padding: 20px;
-            background-color: #f44336;
-            color: white;
-            opacity: 1;
-            transition: opacity 0.6s;
-            margin-bottom: 15px;
-        }
-
-        .alert.success {
-            background-color: #04AA6D;
-        }
-
-        .closebtn {
-            margin-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .closebtn:hover {
-            color: black;
-        }
-
-        #alert {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/alerts.css">
+    <link rel="stylesheet" type="text/css" href="assets/color_picker.css">
+    <script src="assets/alerts.js"></script>
 </head>
 
 <body>
     <h1>
         Age of Origins color code tool
     </h1>
-    <div class="alert success" id="alert">
-        <span class="closebtn">&times;</span>
-        <strong>Success!</strong> Color code has been copied to your clipboard
-    </div>
     <div class="container">
         <label for="colorpicker">Select the color:</label>
         <input type="color" id="colorpicker" value="#ff0000" oninput="getColorCode()">
         <br>
         <p>Color Code: <code id="color-code-display"
-                onclick="copyColorCode()">[<span id="color-code">ff0000</span>ff]</code></p>
+                onclick="copyColorCode()">[<span id="color-code"></span>ff]</code></p>
     </div>
 </body>
 <script>
-    async function send_code_copied_msg() {
-        el = document.getElementById("alert");
-        el.style.display = "block";
-        await new Promise(r => setTimeout(r, 2000));
-        el.style.display = 'none';
-    }
     async function copyColorCode() {
         hexCode = document.getElementById("color-code").innerText;
         code = `[${hexCode}ff]`
         navigator.clipboard.writeText(code);
-        await send_code_copied_msg()
+        await sendSuccessMessage("The color code has been copied to your clipboard.");
     }
     function getColorCode() {
         el = document.getElementById("colorpicker");
