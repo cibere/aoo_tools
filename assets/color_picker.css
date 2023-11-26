@@ -11,10 +11,10 @@ h1 {
     color: green;
 }
 
-/* Mobile */
-@media  (max-width:700px) {
+/* Mobile 
+@media  (max-width:700px) {*/
     body {
-        font-size: 7vw;
+        font-size: 5vw;
     }
     .container {
         margin-top: 45%;
@@ -28,9 +28,9 @@ h1 {
     h1 {
         color: blue;
     }
-}
 
-/* PC */
+
+/* PC 
 @media (min-width:700px) {
     body {
         font-size: 2vw;
@@ -51,3 +51,4 @@ h1 {
         color: black;
     }
 }
+*/
