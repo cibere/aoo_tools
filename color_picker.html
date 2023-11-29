@@ -13,25 +13,34 @@
     <h1>
         AoO Color Picker
     </h1>
+    <details class="detail-container">
+        <summary>
+            How it works
+        </summary>
+        To add color to your messages, you use a color code. Depending on the code, it will make everything that follows it a certain color.
+        A color code is made up of 2 main parts. Let's examine the following code: <code>[519baeff]</code>
+        <p>
+            <ol>
+                <li><code>[</code> - This indicates the start of the code</li>
+                <li><code>b1</code> - This is red byte, in a <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex color code</a></li>
+                <li><code>9b</code> - This is green byte, in a <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex color code</a></li>
+                <li><code>ae</code> - This is blue byte, in a <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex color code</a></li>
+                <li><code>ff</code> - This is alpha byte, in a <a href="https://en.wikipedia.org/wiki/Web_colors#Hex_triplet">hex color code</a></li>
+                <li><code>]</code> - This indicates the end of the code.</li>
+            </ol>
+        </p>
+    </details>
+    <details class="detail-container" style="margin-top: 5px;">
+        <summary>
+            Instructions
+        </summary>
+        <ol>
+            <li>Use the color selector below to pick the color you want your text to be</li>
+            <li>Copy the color code. Clicking on the color code will automatically copy it for you.</li>
+            <li>In age of origins, paste in the color code, and everything that comes after in that message will be the color you chose.</li>
+        </ol>
+    </details>
     <div class="container">
-        <details>
-            <summary>
-                How it works
-            </summary>
-            To add color to your messages, you use a color code. Depending on the code, it will make everything that follows it a certain color.
-            A color code is made up of 2 main parts.
-            <p>
-                <ol>
-                    <li><code>[</code> - This indicates the start of the code</li>
-                    <li><code>ffffff</code></li>
-                </ol>
-            </p>
-        </details>
-        <details>
-            <summary>
-                Instructions
-            </summary>
-        </details>
         <label for="colorpicker" class="pointer">Select the color:</label>
         <br>
         <input class="pointer" type="color" id="colorpicker" value="#ff0000" oninput="getColorCode()">

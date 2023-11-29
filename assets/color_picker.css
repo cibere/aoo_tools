@@ -7,17 +7,33 @@
     height: 10%;
     margin-top: 1%
 }
+.detail-container {
+    background-color: rgb(20, 20, 20);
+    border-radius: 10px;
+    margin: auto;
+}
+code {
+    background-color: black;
+    border-radius: 5px;
+    padding: 3px;
+}
+ol>li {
+    margin-top: 5px;
+}
 
 @media screen and (orientation: portrait) {
     body {
         font-size: 5vw;
     }
     .container {
-        margin-top: 45%;
+        margin-top: 35%;
     }
     .container>input {
         width: 95%;
-    } 
+    }
+    .detail-container {
+        width: 100%;
+    }
 }
 @media screen and (orientation: landscape) {
     body {
@@ -28,5 +44,8 @@
     }
     .container>input {
         width: 30%;
+    }
+    .detail-container {
+        width: 60%;
     }
 }
