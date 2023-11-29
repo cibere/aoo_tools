@@ -3,3 +3,21 @@ body {
     color: white;
     text-align: center;
 }
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.pointer {
+    cursor: pointer;
+}

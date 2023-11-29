@@ -2,17 +2,31 @@
     background-color: black;
     border-radius: 20px;
     padding: 10px;
-    cursor: pointer;
-}
-
-body {
-    font-size: 5vw;
-}
-.container {
-    margin-top: 45%;
 }
 .container>input {
-    width: 95%;
     height: 10%;
     margin-top: 1%
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        font-size: 5vw;
+    }
+    .container {
+        margin-top: 45%;
+    }
+    .container>input {
+        width: 95%;
+    } 
+}
+@media screen and (orientation: landscape) {
+    body {
+        font-size: 2vw;
+    }
+    .container {
+        margin-top: 10%;
+    }
+    .container>input {
+        width: 30%;
+    }
 }

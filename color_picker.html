@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Color Picker for Age of Origins</title>
+    <title>Color Picker | AoO Tools</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <link rel="stylesheet" type="text/css" href="assets/alerts.css">
     <link rel="stylesheet" type="text/css" href="assets/color_picker.css">
@@ -11,14 +11,32 @@
 
 <body>
     <h1>
-        Age of Origins color code tool
+        AoO Color Picker
     </h1>
     <div class="container">
-        <label for="colorpicker">Select the color:</label>
+        <details>
+            <summary>
+                How it works
+            </summary>
+            To add color to your messages, you use a color code. Depending on the code, it will make everything that follows it a certain color.
+            A color code is made up of 2 main parts.
+            <p>
+                <ol>
+                    <li><code>[</code> - This indicates the start of the code</li>
+                    <li><code>ffffff</code></li>
+                </ol>
+            </p>
+        </details>
+        <details>
+            <summary>
+                Instructions
+            </summary>
+        </details>
+        <label for="colorpicker" class="pointer">Select the color:</label>
         <br>
-        <input type="color" id="colorpicker" value="#ff0000" oninput="getColorCode()">
+        <input class="pointer" type="color" id="colorpicker" value="#ff0000" oninput="getColorCode()">
         <br>
-        <p>Color Code: <code id="color-code-display"
+        <p>Color Code: <code class="pointer" id="color-code-display"
                 onclick="copyColorCode()">[<span id="color-code"></span>ff]</code></p>
     </div>
 </body>

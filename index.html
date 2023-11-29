@@ -1,13 +1,14 @@
 <html>
 
 <head>
-    <title>Age of Origin Tools</title>
+    <title>Tool Picker | AoO Tools</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <h1>Age of Origin Tools</h1>
-    <div class="tool-list">
-        <li>- <a href="/color_picker.html">Color Picker</a></li>
+    <div class="tool-list" id="tool-list">
     </div>
     <div class="footer">
         <p>
@@ -15,6 +16,21 @@
                 href="https://discord.com/users/894312088762220605sss">cibere</a>
         </p>
     </div>
+    <script>
+        function addToolToList(tool) {
+            var aTag = document.createElement("a");
+            aTag.href = `/${tool.toLowerCase().replace(" ", "_")}.html`;
+            aTag.innerText = tool;
+
+            var listTag = document.createElement("li");
+            listTag.appendChild(aTag);
+
+            toolListDiv.appendChild(listTag);
+        }
+        toolListDiv = document.getElementById("tool-list");
+        const tool_list = ["Color Picker"];
+        tool_list.forEach(addToolToList)
+    </script>
 </body>
 
 </html>
