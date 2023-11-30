@@ -21,3 +21,8 @@ a:hover {
 .pointer {
     cursor: pointer;
 }
+.sticky {
+    position: sticky;
+    z-index: 99;
+    top: 0;
+}
